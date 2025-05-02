@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Intelligence Calendar</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🧠 Intelligence Calendar</h1>
+      <div id="dateDisplay">
+        <button onclick="changeMonth(-1)">⬅️ Prev Month</button>
+        <span id="monthName"></span> <span id="year"></span>
+        <button onclick="changeMonth(1)">Next Month ➡️</button>
+      </div>
+      <button onclick="changeYear(-1)">⬅️ Prev Year</button>
+      <button onclick="changeYear(1)">Next Year ➡️</button>
+      <button id="voiceBtn">🎤 Add via Voice</button>
+    </header>
+
+    <section id="calendar"></section>
+
+    <section id="events"></section>
+
+    <section id="countdown">
+      <h3>📆 Next Exam Countdown</h3>
+      <div id="examCountdown">No exams found</div>
+    </section>
+
+    <section id="moodTracker">
+      <h3>😊 Mood Tracker</h3>
+      <div>
+        <label>Select Mood:</label>
+        <select id="moodSelect">
+          <option value="">--choose--</option>
+          <option value="😄">Happy</option>
+          <option value="😐">Neutral</option>
+          <option value="😞">Sad</option>
+        </select>
+        <button onclick="saveMood()">Save</button>
+      </div>
+      <div id="moodLog"></div>
+    </section>
+
+    <section id="timetable">
+      <h3>📚 Weekly Timetable</h3>
+      <textarea id="timetableInput" rows="4" placeholder="Mon: DS 10am\nTue: AI 2pm"></textarea>
+      <button onclick="saveTimetable()">Save Timetable</button>
+      <div id="showTimetable"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
